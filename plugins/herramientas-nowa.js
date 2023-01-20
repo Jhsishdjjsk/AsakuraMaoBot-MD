@@ -4,8 +4,8 @@
 -----------------------------------------------------------------------------------------*/
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 let regex = /x/g
-if (!text) throw '⚠️ Y EL NUMERO🤔'
-if (!text.match(regex)) throw `*EJEMPLO DEL USO: ${usedPrefix + command} 521999340434x*`
+if (!text) throw '⚠️ والرقم🤔'
+if (!text.match(regex)) throw `*EJEMPLO DEL USO: ${usedPrefix + command} 393271166550*`
 let random = text.match(regex).length, total = Math.pow(10, random), array = []
 for (let i = 0; i < total; i++) {
 let list = [...i.toString().padStart(random, '0')]
@@ -16,7 +16,7 @@ array.push({ exists: true, jid: result, ...info })
 } else {
 array.push({ exists: false, jid: result })
 }}
-let txt = '♨️ REGISTRADO\n\n' + array.filter(v => v.exists).map(v => `•🔢 NUMERO: wa.me/${v.jid.split('@')[0]}\n*• 😸 DESC:* ${v.status || 'Sin descripcion'}\n*•❇️ FECHA:* ${formatDate(v.setAt)}`).join('\n\n') + '\n\n*❎ NO REGISTRADO*\n\n' + array.filter(v => !v.exists).map(v => v.jid.split('@')[0]).join('\n')
+let txt = '♨️ مسجل \n\n' + array.filter(v => v.exists).map(v => `•🔢 NUMERO: wa.me/${v.jid.split('@')[0]}\n*• 😸 DESC:* ${v.status || 'لا يوجد وصف'}\n*•❇️ تاريخ:* ${formatDate(v.setAt)}`).join('\n\n') + '\n\n*❎ ليس مسجل*\n\n' + array.filter(v => !v.exists).map(v => v.jid.split('@')[0]).join('\n')
 m.reply(txt)
 }
 handler.command = /^nowa$/i

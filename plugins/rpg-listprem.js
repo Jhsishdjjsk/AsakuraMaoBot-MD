@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
   let user = Object.entries(global.db.data.users).filter(user => user[1].premiumTime).map(([key, value]) => {
     return { ...value, jid: key }
   })
-  let name = '🎟️ 𝗣𝗥𝗘𝗠𝗜𝗨𝗠'
+  let name = '🎟️ مميز'
   //let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
   let premTime = global.db.data.users[m.sender].premiumTime
   let prem = global.db.data.users[m.sender].premium
@@ -12,9 +12,9 @@ let handler = async (m, { conn, args }) => {
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedP.length)
   await conn.sendButton(m.chat, `${htki} *🎟️ PREMIUM 🎟️* ${htka}
   
-*╭ ༻✦༺ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙄𝙉𝙁𝙊 ༻✦༺*
-*┃✢ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍*\n*┃✢* ${conn.getName(m.sender)}
-${prem ? `${clockString (usuario - new Date() * 1)}` : '┃✢ *𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 | 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀*\n┃🚫 𝘾𝘼𝘿𝙐𝘾𝘼𝘿𝙊 : 𝙏𝙄𝙈𝙀𝘿 𝙊𝙐𝙏 '}
+*╭ ༻✦༺ معلومات مميزة ༻✦༺*
+*┃✢ مستخدم*\n*┃✢* ${conn.getName(m.sender)}
+${prem ? `${clockString (usuario - new Date() * 1)}` : '┃✢ *وقت مميز*\n┃🚫 انتهت مهله '}
 *╰•·–––––––––––––––·•*
 
 ╭•·–––––––––––––––·•

@@ -79,18 +79,17 @@ let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         throw `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
-┃ *NOMBRE | NAME*
-┃ ${name}
+╭━━━[ *დمستوىდ* ]━━━━⬣
+┃დ *الاسم:* ${name} დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *NIVEL:* *${user.level}*
+┃დ *مستوى:* *${user.level}* დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *RANGO:* ${user.role}
+┃დ *رتبة:* ${user.role} დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *XP:* *${user.exp - min}/${xp}*
-╰━━━〔 *𓃠 ${vs}* 〕━━━━━⬣
+┃დ *اكس بي:* *${user.exp - min}/${xp}* დ
+╰━━━〔 *${vs}* 〕━━━━━⬣
 
-*Te falta ${max - user.exp} de XP para subir de nivel*
+*تحتاج إلى ${max - user.exp} XP للارتقاء إلى المستوى التالي*
 `.trim()
     }
         
@@ -99,18 +98,18 @@ let user = global.db.data.users[m.sender]
     if (before !== user.level) {
         let teks = `Bien hecho! ${conn.getName(m.sender)} Nivel: ${user.level}`
         let str = `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
-┃ *NIVEL ANTERIOR:* *${before}*
+╭━━━[ *مستوىდ* ]━━━━⬣
+┃დ *المستوى السابق:* *${before}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *NIVEL ACTUAL:* *${user.level}*
+┃დ *المستوى الحالي:* *${user.level}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *RANGO* ${user.role}
+┃დ *رتبة* ${user.role}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *FECHA:* *${new Date().toLocaleString('id-ID')}*
-╰━━━〔 *𓃠 ${vs}* 〕━━━━━⬣
+┃დ *تاريخ:* *${new Date().toLocaleString('id-ID')}*
+╰━━━〔 *𓃠${vs}* 〕━━━━━⬣
 
-*_Cuanto más interactúes con GataBot-MD, mayor será tu nivel!!_*
-*_Actualiza tú rango con el comando ${usedPrefix}rol!!_*
+*_كل ما تفاعلت يذيد مستواك اكثر_*
+*_قم بتحديث نطاقك باستخدام الأمر ${usedPrefix}rol!!_*
 `.trim()
         try {
             const img = await levelup(teks, user.level)

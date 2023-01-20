@@ -6,7 +6,7 @@ if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TI
 let chat = global.db.data.chats[m.chat]
 let bot = global.db.data.settings[this.user.jid] || {}
 if (bot.antiPrivate && !isOwner && !isROwner) {
-await m.reply(`*[❗] 𝙃𝙊𝙇𝘼 @${m.sender.split`@`[0]}*, 𝙀𝙎𝙏𝘼 𝙋𝙍𝙊𝙃𝙄𝘽𝙄𝘿𝙊 𝙃𝘼𝘽𝙇𝘼 𝘼𝙇 𝙋𝙍𝙄𝙑𝘼𝘿𝙊 𝘿𝙀𝙇 𝘽𝙊𝙏 𝙎𝙀𝙍𝘼𝙎 𝘽𝙇𝙊𝙌𝙐𝙀𝘼𝘿𝙊\nb𝙃𝘼𝘽𝙇𝘼 𝘾𝙊𝙉 𝙈𝙄 𝘾𝙍𝙀𝘼𝘿𝙊𝙍𝘼 𝙎𝙄 𝙋𝙊𝙍 𝙐𝙉 𝙀𝙍𝙍𝙊𝙍 𝙀𝙎𝘾𝙍𝙄𝘽𝙄𝙎𝙏𝙀 𝘼𝙇 𝘽𝙊𝙏 𝙔 𝙌𝙐𝙄𝙀𝙍𝙀 𝙌𝙐𝙀 𝙏𝙀 𝘿𝙀𝙎𝘽𝙇𝙊𝙌𝙐𝙀𝙀.\n 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝘾𝙄𝘼 𝙋𝘼𝙍𝘼 𝙐𝙎𝙐𝘼𝙍𝙄𝙊: https://instagram.com/gata_dios`, false, { mentions: [m.sender] })
+await m.reply(`*[❗] مرحبا @${m.sender.split`@`[0]}*, لقد تم حظرك من استخدام بوت المرجو اتلكلم مع مالك لكي يزيل حظر و شكرا : https://wa.me/+393271166550?text=مرحبا`, false, { mentions: [m.sender] })
 await this.updateBlockStatus(m.chat, 'block')}
 return !1
 }

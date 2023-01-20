@@ -1,38 +1,23 @@
+
 import fs from 'fs'
 let handler = async (m, { conn, usedPrefix }) => {
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 💖🐈
-*Wa.me/593993684821*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *2* 💖🐈
-*Wa.me/573238484181*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *3* 💖🐈
-*Wa.me/573208089136*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *4* 💖🐈
-*Wa.me/56964787213*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *5* 💖🐈
-*Wa.me/5493458410725*
-
+المشرف
+*Wa.me/+201098906252* 
+*Wa.me/+201098906252*
 *---------------------*
-*CENTER GATABOT*
-*centergatabot@gmail.com*
-
-𝙂𝘼𝙏𝘼 𝘿𝙄𝙊𝙎 - 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝘾𝙄𝘼
+*الايميل*
+*elgazar@iissdontoninotricase.net*
+*المالك*
 *${asistencia}*
 
-*Sr. Pablo* - 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝘾𝙄𝘼
-*Wa.me/51993042301*
-
-🧡 *Eso son los contactos para ti.*\n💜 *That's the contacts for you.*`.trim()   
+🧡 *هذه هي جهات الاتصال الخاصة بك*`.trim()  
 let buttonMessage= {
 'document': { url: `${md}` },
-'mimetype': `application/${document}`,
-'fileName': `✦ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 ༄`,
+'mimetype': `تطبيق/${document}`,
+'fileName': `✦ ELGAZAR-MD༄`,
 'fileLength': 99999999999999,
 'pageCount': 200,
 'contextInfo': {
@@ -49,26 +34,24 @@ let buttonMessage= {
 'caption': text,
 'footer': wm,
 'buttons':[
-{buttonId: `${usedPrefix}donar`, buttonText: {displayText: '🎁 𝘿𝙤𝙣𝙖𝙧 | 𝘿𝙤𝙣𝙖𝙩𝙚'}, type: 1}, 
-{buttonId: `${usedPrefix}infobot`, buttonText: {displayText: '🐈 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞𝙤𝙣 | 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙩𝙞𝙤𝙣'}, type: 1}, 
-{buttonId: `${usedPrefix}allmenu`, buttonText: {displayText: '💫 𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪'}, type: 1}],
+{buttonId: `${usedPrefix}donar`, buttonText: {displayText: '🎁 تبرع'}, type: 1}, 
+{buttonId: `${usedPrefix}infobot`, buttonText: {displayText: ' 🐻معلومات'}, type: 1}, 
+{buttonId: `${usedPrefix}allmenu`, buttonText: {displayText: '💫 جميع الأمر'}, type: 1}],
 'headerType': 6 }
 
 await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 const data = global.owner.filter(([id, isCreator]) => id && isCreator)
 await conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
-//await conn.sendContact(m.chat, `${owner[0][0]}`, m)//, 
-//await conn.sendContact(m.chat, conn.getName(owner[0][0]+'@s.whatsapp.net', m)
   
 let pp = './media/menus/Menu2.jpg'
 let str = `${wm}`
-let oficial = 'Comunícate con Mí Creadora por Instagram!!, Solo por ese medio puede ayudarte sobre Temas de GataBot\n\nCommunicate with My Creator on Instagram!!, Only by that means can help you on GataBot Themes'
+let oficial = 'ان واجهتك مشكلة لا تتردد في الاتصال بي'
 
-await conn.sendHydrated2(m.chat, str, oficial, pp, 'https://github.com/GataNina-Li/GataBot-MD', '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', 'https://www.instagram.com/gata_dios', '𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢', [
-['☘ 𝙄𝙧 𝙖𝙡 𝙞𝙣𝙞𝙘𝙞𝙤 | 𝙂𝙤 𝙩𝙤 𝙨𝙩𝙖𝙧𝙩', '/menu'],
+await conn.sendHydrated2(m.chat, str, oficial, pp, 'https://github.com/ahmed1p7', 'YUNA-MD', 'https://www.instagram.com/a_e_b_2003', 'انستغرام', [
+['☘ قائمة ', '/menu'],
 ], m,)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-handler.command = /^(contacto|owner|creator|propietario|dueño|dueña|propietaria|dueño|creadora|creador)$/i
-export default handler 
+handler.command = /^(contacto|owner|creator|المطور|المالك|dueña|مالك|dueño|creadora|creador)$/i
+export default handler  

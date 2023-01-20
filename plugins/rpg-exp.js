@@ -62,51 +62,42 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
   
 //let name = await conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
-//let pp = './media/menus/Menu1.jpg'
+let pp = './media/menus/Menu1.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
 
 
-let menu = `╭━━〔 *${wm}* 〕━━⬣
-┃ ✪ *NOMBRE* 
-┃ ${username}
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *EXPERIENCIA | EXP* 
-┃ ➥ *${user.exp - min}/${xp}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *NIVEL | LEVEL*
-┃ ➥ *${level}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *ROL*
-┃ ➥ ${role}
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *GATACOINS*
-┃ ➥ *${money}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *TOKENS*
-┃ ➥ *${joincount}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *DIAMANTES* 
-┃ ➥ *${limit}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *FECHA*
-┃ ➥ *${week}, ${date}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *USUARIOS | USERS*
-┃ ➥ *${Object.keys(global.db.data.users).length}* 
-╰━━━━━━〔 *𓃠 ${vs}* 〕━━━━━━⬣`.trim()
-conn.sendHydrated(m.chat, menu, wm, null, 'https://github.com/ColapsusHD/FutabuBot-MD', '𝙵𝚞𝚝𝚊𝚋𝚞𝙱𝚘𝚝-𝙼𝙳', null, null, [
-['𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 ⚡', '.buy'],
-['𝙂𝙖𝙩𝙖𝘾𝙤𝙞𝙣𝙨 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 🐈', '/buy2'],
-['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', '#top']
+let menu = `╭━━〔  *${wm}*  〕━━⬣
+┃ ✪ *رقم* : ${username}
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *اكس بي* : *${user.exp - min}/${xp}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *مستواك* : *${level}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *رتبه* :${role}
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *كوينز* : *${money}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *الرموز* : *${joincount}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *الماس* : *${limit}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *تاريخ* : *${week}, ${date}*
+┃ا┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ ✪ *النسخدمون* :*${Object.keys(global.db.data.users).length}* 
+         ━━━━━━〔  *${vs}* 〕━━━━━━⬣`.trim()
+conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/ahmed1p7', 'YUNA BOT', null, null, [
+['تجربة دايموند ⚡', '.buy'],
+['شراء 🐈', '/buy2'],
+[' توب 🏆', '#top']
 ], m,)
 
 }
 
 handler.help = ['infomenu'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
-handler.command = /^(xp|experiencia|esperiencia|esperiensia|experiensia|exp|coinsgata|coins)$/i
+handler.command = /^(xp|experiencia|بروفيل|ا|experiensia|exp|coinsgata|coins)$/i
 handler.exp = 10
 export default handler
 

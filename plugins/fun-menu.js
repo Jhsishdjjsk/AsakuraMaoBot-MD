@@ -64,62 +64,36 @@ let username = conn.getName(who)
 let user = global.db.data.users[m.sender]
 //user.registered = false
 
-//let pp = gataVidMenu.getRandom()
-//let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-//let fsizedoc = '1'.repeat(10)
-//let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
+let pp = gataVidMenu.getRandom()
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+let fsizedoc = '1'.repeat(10)
+let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
-let menu = `╭┄〔 *${wm}* 〕┄⊱
+let menuA = `🎠 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
+let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${week}, ${date}*
 ┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
 ╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+
 ⠇ ${lenguajeGB['smsTex10']()} 🎡
-∘ _${usedPrefix}mates | matemáticas | math_
-∘ _${usedPrefix}ppt *piedra : papel : tijera*_
-∘ _${usedPrefix}tictactoe | ttt *sala*_
-∘ _${usedPrefix}deltictactoe | delttt_
-∘ _${usedPrefix}topgays_
-∘ _${usedPrefix}topotakus_
-∘ _${usedPrefix}toppajer@s_
-∘ _${usedPrefix}topput@s_
-∘ _${usedPrefix}topintegrantes | topintegrante_
-∘ _${usedPrefix}toplagrasa | topgrasa_
-∘ _${usedPrefix}toppanafrescos | toppanafresco_
-∘ _${usedPrefix}topshiposters | topshipost_
-∘ _${usedPrefix}toplindos | toplind@s_
-∘ _${usedPrefix}topfamosos | topfamos@s_
-∘ _${usedPrefix}topparejas | top5parejas_
-∘ _${usedPrefix}gay | gay *@tag*_
-∘ _${usedPrefix}gay2 *nombre : @tag*_
-∘ _${usedPrefix}lesbiana *nombre : @tag*_
-∘ _${usedPrefix}manca *nombre : @tag*_
-∘ _${usedPrefix}manco *nombre : @tag*_
-∘ _${usedPrefix}pajero *nombre : @tag*_
-∘ _${usedPrefix}pajera *nombre : @tag*_
-∘ _${usedPrefix}puto *nombre : @tag*_
-∘ _${usedPrefix}puta *nombre : @tag*_
-∘ _${usedPrefix}rata *nombre : @tag*_
-∘ _${usedPrefix}love *nombre : @tag*_
-∘ _${usedPrefix}doxear *nombre : @tag*_
+∘ _${usedPrefix}ttt *غرفة*_
+∘ _${usedPrefix} مسح_
+∘ _${usedPrefix}ذكاء *nombre : @tag*_
+∘ _${usedPrefix}غباء *nombre : @tag*_
+∘ _${usedPrefix}حب *nombre : @tag*_
+∘ _${usedPrefix}جميل *nombre : @tag*_
 ∘ _${usedPrefix}doxxeame_
-∘ _${usedPrefix}pregunta *texto*_
-∘ _${usedPrefix}apostar | slot *cantidad*_
-∘ _${usedPrefix}formarpareja_
-∘ _${usedPrefix}dado_
-∘ _${usedPrefix}verdad_
-∘ _${usedPrefix}reto_
-∘ _${usedPrefix}multijuegos_
-∘ _${usedPrefix}juegos_
+∘ _${usedPrefix}slot *كم*_
+∘ _${usedPrefix}الاغبا
+∘ _${usedPrefix}دادو_
+∘ _${usedPrefix}تك_
+∘ _${usedPrefix}لو_
+∘ _${usedPrefix}xo_
 `.trim()
-await conn.sendHydrated(m.chat, menu, wm, null, null, null, null, null, [
-['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu'],
-['𝙄𝙣𝙫𝙚𝙣𝙩𝙖𝙧𝙞𝙤 | 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧𝙮 🎒', '/inventario'],
-['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡', '#menu']
-], m,)
+await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 
 } catch (e) {
 await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)

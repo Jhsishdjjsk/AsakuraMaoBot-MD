@@ -64,12 +64,13 @@ let username = conn.getName(who)
 let user = global.db.data.users[m.sender]
 //user.registered = false
   
-//let pp = gataVidMenu.getRandom()
-//let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-//let fsizedoc = '1'.repeat(10)
-//let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
+let pp = gataVidMenu.getRandom()
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+let fsizedoc = '1'.repeat(10)
+let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
-let menu = `╭┄〔 *${wm}* 〕┄⊱
+let menuA = `🪄 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
+let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${week}, ${date}*
 ┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
 ┊
@@ -77,40 +78,36 @@ let menu = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
 ╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+
 ⠇ ${lenguajeGB['smsTex9']()} 🚀
-∘ _${usedPrefix}imagen | image *texto*_
-∘ _${usedPrefix}pinterest | dlpinterest *texto*_
-∘ _${usedPrefix}wallpaper|wp *texto*_
-∘ _${usedPrefix}play | play2 *texto o link*_
-∘ _${usedPrefix}play.1 *texto o link*_
-∘ _${usedPrefix}play.2 *texto o link*_ 
-∘ _${usedPrefix}ytmp3 | yta *link*_
-∘ _${usedPrefix}ytmp4 | ytv *link*_
-∘ _${usedPrefix}pdocaudio | ytadoc *link*_
-∘ _${usedPrefix}pdocvieo | ytvdoc *link*_
-∘ _${usedPrefix}tw | twdl | twitter *link*_
-∘ _${usedPrefix}spotify | music *text*_
-∘ _${usedPrefix}facebook | fb *link*_
-∘ _${usedPrefix}instagram *link video o imagen*_
-∘ _${usedPrefix}verig | igstalk *usuario(a)*_
-∘ _${usedPrefix}ighistoria | igstory *usuario(a)*_
-∘ _${usedPrefix}tiktok *link*_
-∘ _${usedPrefix}tiktokfoto | tiktokphoto *usuario(a)*_
-∘ _${usedPrefix}vertiktok | tiktokstalk *usuario(a)*_
-∘ _${usedPrefix}mediafire | dlmediafire *link*_
-∘ _${usedPrefix}clonarepo | gitclone *link*_
-∘ _${usedPrefix}clima *país ciudad*_
+∘ _${usedPrefix}imagen | صور  *نص*_
+∘ _${usedPrefix}pinterest | p *نص*_
+∘ _${usedPrefix}wallpaper|wp *نص*_
+∘ _${usedPrefix}play | play2 *نص أو رابط*_
+∘ _${usedPrefix}play.1 *رابط او نص*_
+∘ _${usedPrefix}play.2 *رابط او نص*_ 
+∘ _${usedPrefix}ytmp3 | yta *رابط*_
+∘ _${usedPrefix}ytmp4 | ytv *رابط*_
+∘ _${usedPrefix}pdocaudio | ytadoc *رابط*_
+∘ _${usedPrefix}pdocvieo | ytvdoc *رابط*_
+∘ _${usedPrefix}tw |twdl | twitter *رابط*_
+∘ _${usedPrefix}facebook | fb *رابط*_
+∘ _${usedPrefix}instagram *رابط فيديو او صوره*_
+∘ _${usedPrefix}verig | igstalk *مستخدم*_
+∘ _${usedPrefix}ighistoria | igstory *اسم المستخدم*_
+∘ _${usedPrefix}tiktok *رابط*_
+∘ _${usedPrefix}tiktokfoto | tiktokphoto *اسم المستخدم*_
+∘ _${usedPrefix}vertiktok | tiktokstalk *اسم المستخدم*_
+∘ _${usedPrefix}mediafire | dlmediafire *رابط*_
+∘ _${usedPrefix}clonarepo | gitclone *رابط*_
+∘ _${usedPrefix}clima *بلد المدينة*_
 ∘ _${usedPrefix}consejo_
-∘ _${usedPrefix}morse codificar *texto*_
-∘ _${usedPrefix}morse decodificar *morse*_
+∘ _${usedPrefix}morse codificar *نص*_
+∘ _${usedPrefix}morse decodificar *مورس*_
 ∘ _${usedPrefix}fraseromantica_
 ∘ _${usedPrefix}historia_
 `.trim()
-await conn.sendHydrated(m.chat, menu, wm, null, null, null, null, null, [
-['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu'],
-['𝙄𝙣𝙫𝙚𝙣𝙩𝙖𝙧𝙞𝙤 | 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧𝙮 🎒', '/inventario'],
-['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡', '#menu']
-], m,)
+await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 
 } catch (e) {
 await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
